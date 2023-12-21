@@ -1,0 +1,34 @@
+{
+  "name": "@xumeng03/ora",
+  "version": "1.0.0-GA",
+  "description": "easily use spinner in terminal",
+  "author": {
+    "name": "xumeng03",
+    "email": "xumeng03@qq.com"
+  },
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/ora.esm.js",
+  "types": "./dist/ora.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "npm run build && node dist/ora.esm.js",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript --bundleConfigAsCjs"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "rollup": "^4.9.1",
+    "tslib": "^2.6.2"
+  },
+  "dependencies": {
+    "@types/node": "^20.10.5",
+    "@xumeng03/chalk": "^1.0.0-GA"
+  }
+}
